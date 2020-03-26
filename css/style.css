@@ -48,6 +48,19 @@ padding-top: 20px;
 .nav ul li.log a{
     margin: 0px 64px;
 }
+/* this bit of code is to make the nav bar stiky */
+.nav.sticky{
+    width: 100%;
+    position: fixed;
+    background-color: whitesmoke;
+    box-shadow: 0 10px 10px 10px -10px rgba(0, 0, 0, 0.35);
+    animation-name: fadeNaveBar;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+.nav.sticky a{
+    color: #612525;
+}
 /* this code is for the styling of the burger menu icon */
 .nav-icon{
     position: absolute;
@@ -83,14 +96,15 @@ padding-top: 20px;
     background: #f1c30f;
     color: #18191d;
     position: fixed;
-    top: 0px;
+    top: 96px;
     left: 0px;
     height: 100%;
     width: 100%;
     padding: 58px;
     z-index: 99;
     overflow-x: hidden;
-    
+    visibility: hidden;
+    opacity: 0;
     transform: translateY(-100px);
     transition: all 400ms ease-in-out;
 }
@@ -144,7 +158,7 @@ background: #ff1637;
     font-size: 20px;
     display: inherit;
     text-align: center;
-    border-right: 50px;
+    border-radius: 50px;
     transition: all ease 1s;
     margin-top: 40px;
 }
@@ -153,12 +167,62 @@ background: #ff1637;
     margin-top: -10px;
     border-color: #000000;
 }
+.social-icons a:hover {
+    color: #000000;
+    margin-top: -10px;
+    border-color: #000000;
+}
 ul .social-icons .list-inline{
     text-align: center;
     margin-top: 22px;
+}
+.list-inline {
+    padding-left: 459px !important;
+}
+@media only screen and (max-width: 600px) {
+  .list-inline {
+    padding-left: 0px !important;
+}
 }
 .list-inline > li{
     display: inline-block;
     padding-right: 5px;
     padding-left: 5px;
+}
+
+/* code for styling the x in the burger menu */
+.corner-circle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 120px;
+    width: 120px;
+    background-color: whitesmoke;
+    border-radius: 0 0 0 120px;
+    z-index: 2;
+}
+
+.close-nav{
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.close-nav span{
+    background: #687575;
+    width: 30px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: 16px;
+}
+
+.close-nav span:nth-child(1){
+    transform: rotate(45deg)
+}
+.close-nav span:nth-child(2){
+    transform: rotate(-45deg)
 }
