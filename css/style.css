@@ -9,7 +9,6 @@ position: relative;
 width: 100%;
 overflow: hidden;
 height: 450px;
-padding-top: 20px;
 }
 /* header style for nav bar */
 .nav{
@@ -49,16 +48,17 @@ padding-top: 20px;
     margin: 0px 64px;
 }
 /* this bit of code is to make the nav bar stiky */
-.nav.sticky{
+.sticky{
     width: 100%;
     position: fixed;
     background-color: whitesmoke;
     box-shadow: 0 10px 10px 10px -10px rgba(0, 0, 0, 0.35);
+    transition: all ease-in-out 2s;
     animation-name: fadeNaveBar;
     animation-duration: 1s;
     animation-fill-mode: both;
 }
-.nav.sticky a{
+.sticky a{
     color: #612525;
 }
 /* this code is for the styling of the burger menu icon */
@@ -96,7 +96,7 @@ padding-top: 20px;
     background: #f1c30f;
     color: #18191d;
     position: fixed;
-    top: 96px;
+    top: 100px;
     left: 0px;
     height: 100%;
     width: 100%;
@@ -108,7 +108,7 @@ padding-top: 20px;
     transform: translateY(-100px);
     transition: all 400ms ease-in-out;
 }
-.full-navegation.open-burger-menu{
+.open-burger-menu{
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
@@ -118,8 +118,17 @@ padding-top: 20px;
 .full-navegation .logos{
     display: flex;
     justify-content: center;
-    padding: 6rem;
+    padding: 4rem;
     
+}
+.style-title{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #18191d;
+    font-size: 50px;
+
+}
+ a:hover{
+text-decoration: none;
 }
 .navegation2{
     display: flex;
