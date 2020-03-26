@@ -80,8 +80,8 @@ padding-top: 20px;
 }
 /* this code is for style the burger menu */
 .full-navegation{
-    background: #c5c5cc;
-    color: black;
+    background: #f1c30f;
+    color: #18191d;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -101,11 +101,11 @@ padding-top: 20px;
     transition: all 400ms ease-in-out;
     z-index: 99;
 }
-.full-navegation.logo{
+.full-navegation .logos{
     display: flex;
     justify-content: center;
-     padding: 6rem;
-    color: blueviolet;
+    padding: 6rem;
+    
 }
 .navegation2{
     display: flex;
@@ -120,15 +120,45 @@ padding-top: 20px;
 .navegation2 ul li{
     display: flex;
     flex: 50%;
-    background-color: #d5cdcd00;
-    padding: 16px;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-bottom: 10px solid #f1c30f;
+    border-right: 10px solid #f1c30f;
     transition: all 500ms;
 }
 .navegation2 ul li a{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
-    color: #333333;
+    color: #18191d;
 }
 .navegation2 ul li:hover{
 background: #ff1637;
+}
+/* code for styling the socil media icons */
+.social-icons a{
+    color: whitesmoke;
+    border: 4px solid whitesmoke;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    font-size: 20px;
+    display: inherit;
+    text-align: center;
+    border-right: 50px;
+    transition: all ease 1s;
+    margin-top: 40px;
+}
+.social-icons a:hover i{
+    color: #000000;
+    margin-top: -10px;
+    border-color: #000000;
+}
+ul .social-icons .list-inline{
+    text-align: center;
+    margin-top: 22px;
+}
+.list-inline > li{
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
 }
