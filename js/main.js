@@ -14,14 +14,25 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var sc = $(window).scrollTop();
         if( sc > 100){
-            $(".nav").addClass("sticky")
-           
-            
+            $(".nav").addClass("sticky")   
         }
         else{
             $(".nav").removeClass("sticky")
         }
 
     });
+    // this line of code is slider of images  
+    $('.bxslider').bxSlider({
+        mode: 'horizontal',
+        moveSlides:1,
+        slideMargin:40,
+        infiniteLoop:true,
+        minSlides:1,
+        maxSlides:1,
+        speed:1200,
+
+    });
+    
 });
+
 

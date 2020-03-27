@@ -8,19 +8,24 @@ html{
 position: relative;
 width: 100%;
 overflow: hidden;
-height: 450px;
+height: 715px;
 }
 /* header style for nav bar */
 .nav{
     display: flex;
     justify-content: end;
-    padding: 10px 30px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     position: absolute;
     transform: all 0.3s;
     background: #fafafa;
     z-index: 9;
     top: 0px;
     width: 100%;
+}
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
 }
 .nav ul{
     display: flex;
@@ -51,15 +56,29 @@ height: 450px;
 .sticky{
     width: 100%;
     position: fixed;
-    background-color: whitesmoke;
+    background-color: #fffafa91;
     box-shadow: 0 10px 10px 10px -10px rgba(0, 0, 0, 0.35);
     transition: all ease-in-out 2s;
     animation-name: fadeNaveBar;
     animation-duration: 1s;
     animation-fill-mode: both;
+    
+}
+@keyframes fadeNaveBar{
+    from{
+        opacity: 0;
+        -webkit-transform: translate3d(0,-100%,0);
+        transform: translate3d(0,-100%,0);
+    }
+    to{
+        opacity: 1;
+        transform: none;
+        -webkit-transform: none;
+        -o-transform: none;
+    }
 }
 .sticky a{
-    color: #612525;
+    color: #000000 !important;
 }
 /* this code is for the styling of the burger menu icon */
 .nav-icon{
@@ -235,3 +254,77 @@ ul .social-icons .list-inline{
 .close-nav span:nth-child(2){
     transform: rotate(-45deg)
 }
+
+/* this code is for video styling */
+video#headere-video{
+    width: 100%;
+}
+
+/* this code is for the sociol icos apearing in the video */
+.bx-wrapper .social-icons a{
+    color: #fafafa;
+    border: 1px solid #fafafa;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    display: inherit;
+    text-align: center;
+    padding-top: 5px;
+    transition: all ease 1s;
+    background: #000000;
+    border-radius: 0px;
+}
+.bx-wrapper{
+    border: 0 !important;
+}
+.bx-wrapper .social-icons a i{
+    position: relative;
+    bottom: 7px;
+}
+.video-content{
+    position: absolute;
+    top: 290px;
+    color: #fafafa;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+}
+.video-content h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.video-content p {
+    font-family: 'Montserrat', sans-serif;
+}
+/* this code allows the button yo have a pulse */
+#video-button{
+    font-family: 'Montserrat', sans-serif;
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px 40px;
+    border: none;
+    background-color: #fafafa;
+    color: #000000;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 50px;
+    animation: shadow-pulse 2s infinite;
+    text-transform: uppercase;
+}
+@keyframes shadow-pulse{
+    0%{
+        box-shadow: 0 0 0 0px rgba(12, 235, 243, 0.2)
+    }
+    100%{
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.2)
+    }
+}
+#video-button:hover{
+    background: #0ec0c8;
+    color: #fafafa;
+    text-decoration: none;
+}
+/* this code is to style the social icons in the header */
